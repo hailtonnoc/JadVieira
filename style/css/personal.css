@@ -21,6 +21,14 @@ html::-webkit-scrollbar-thumb:hover
     background:#b727bc
 }
 
+#nome{
+    color:#b727bc;
+    font-size: 600%;
+    position: absolute;
+    left: -180%;
+    bottom: -50%;
+}
+
 /* ____________________________________________________________________max-320-width */
 
 address
