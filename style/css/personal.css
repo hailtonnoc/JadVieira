@@ -1,0 +1,604 @@
+
+html::-webkit-scrollbar
+{
+    width: 9px;
+}
+
+html::-webkit-scrollbar-track
+{
+    background-color: rgb(0, 0, 0);
+}
+
+html::-webkit-scrollbar-thumb
+{
+    background: #67275e;
+    border-radius: 0px;
+    height: 3px;
+}
+
+html::-webkit-scrollbar-thumb:hover
+{
+    background:#b727bc
+}
+
+/* ____________________________________________________________________max-320-width */
+
+address
+{
+    font-style:normal;
+}
+
+header
+{
+    height: 100%;
+    background-image: url(../../elementos/imgs/Logot.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    animation: logoIntro .9s alternate;
+    animation-delay: .9s;
+}
+
+html,
+body
+{
+    height: 100%;
+    margin: 0%;
+    background: linear-gradient(to right, #b727bc 18%, #67275e);
+}
+
+h2
+{
+    font-family: 'Prata', serif;
+    color: rgba(0, 0, 0, 0.81);
+    font-size: 1.8em;
+    font-weight:500;
+    margin-top: 1%;
+}
+
+h3
+{
+    font-family: 'Prata', serif;
+    color: rgba(0, 0, 0, 0.81);
+    font-size: 1.5em;
+    font-weight:500;
+    margin: .9%;
+}
+
+main
+{
+    background: linear-gradient(to right, #b727bc 18%, #67275e);
+}
+
+span
+{
+    color: white;
+}
+
+ul
+{
+    margin: 0%;
+}
+
+#nomePrincipal
+{
+    margin: 0%;
+}
+
+.nomeprincipal
+{
+    font-family: 'Prata', serif;
+    color: #b727bc;
+    font-size: 1.8em;
+}
+.nomeprincipal i small
+{
+    font-family: 'Prata', serif;
+    color: #b727bc;
+}
+
+
+/* __________________________________________________________________________________menu */
+.menu
+{
+    display: inline-block;
+    position: relative;
+    left: 80.1%;
+}
+
+.menuContent
+{
+    display: none;
+    padding: 0%;
+}
+
+.menuContent > li
+{
+    margin: 15%;
+}
+
+.menu:hover .menuContent
+{
+    display: block;
+}
+
+
+
+/* __________________________________________________________________________________banner */
+.banner369
+{
+    color: whitesmoke;
+    background-color: #80808027;
+    padding: 9px;
+    padding-bottom: 0px;
+    width: 69%;
+    height: 18vh;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9em;
+}
+
+.btn369
+{
+    background: linear-gradient(to right, rgba(177, 15, 128, 0.952), rgba(122, 40, 101, 0.952));
+    height: 36px;
+}
+
+.btn369 a
+{
+    text-decoration: none;
+}
+
+#nomeford
+{
+    display: inline-block;
+    float: right;
+    margin: 5.4%;
+}
+
+/* _________________________________________________________________________________sobre */
+
+#imgsobre
+{
+    width: 99.9%;
+    display: block;
+    margin: auto;
+}
+
+.title
+{
+    font-family: 'Prata', serif;
+    color: rgba(0, 0, 0, 0.81);
+    font-size: 1.38em;
+    font-weight:500;
+}
+/* __________________________________________________________________________poster */
+
+.poster
+{
+    background-color: #ffffff;
+    padding: 6%;
+    font-size: 1.41em;
+}
+
+/* __________________________________________________________________________cards */
+.cardExpand
+{
+    margin: 3% 0%;
+    width: 99%;
+}
+
+.cardExpand-heading
+{
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.884) 1%, #67272d26 90% );
+    padding: .9%;
+    width: 99%;
+}
+
+.title
+{
+    color: white;
+}
+
+.cardExpand-body
+{
+    padding: 3%;
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+    right: .9%;
+    width: 90%;
+}
+
+.cardExpand:hover .cardExpand-body
+{
+    display: inline-block;
+}
+/* ___________________________________________________________________________________ */
+
+.cardDuro
+{
+    margin: 3% auto;
+    background-color: #ffffff;
+    width: 81%;
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.527) 6px 6px 4.5px;
+}
+
+.cardDuro-body
+{
+    padding: 3%;
+}
+
+/*_________________________________________________________________________________Outros */
+
+
+.img99
+{
+    width: 99.9%
+}
+
+/* __________________________________________________________________________________Rodape */
+
+.links
+{
+    display: block;
+    width: 300px;
+    margin: 0% auto;
+}
+
+.links a img
+{
+    display: inline;
+    margin: 1.2% .3%;
+    border-radius: 50%;
+    width: 90px;
+}
+
+footer
+{
+    text-align: center;
+    color: #b727bc;
+    background: rgb(0, 0, 0);
+    padding: 1.5%;
+}
+
+a:link
+{
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:visited
+{color: whitesmoke;}
+
+/*____________________________________________________________________________Outras telas */
+
+@media (min-width: 630px)
+{
+    header
+    {
+        height: 100%;
+        background-size: 50.4%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: black;
+        background-image: url(../../elementos/imgs/Logot.png);
+        animation: logoIntro .9s alternate;
+        animation-delay: .9s;
+    }
+
+    nav
+    {
+        max-width: 300px;
+    }
+
+
+/*___________________________________________________________________________________menu*/
+    .menu
+    {
+        width: 45vw;
+        padding: 1%;
+        position: absolute;
+        left: 50%;
+    }
+
+    .menu >span
+    {
+        display: none;
+    }
+
+    .menuContent
+    {
+        display: block;
+    }
+    .menuContent > li
+    {
+        padding: 1.08%;
+        display: inline-block;
+        margin: 1%;
+    }
+
+    .menuContent > li:hover
+    {
+        font-size: 1.17em;
+        transition-duration: .6s;
+    }
+
+
+
+/*__________________________________________________________________________________sobre*/
+    #sobre
+    {
+        display: grid;
+        grid-template-areas: "imgsobre","sobres";
+        grid-template-rows: 18%  24% 24% 24%;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    #sobre > h2
+    {
+        grid-area: sobres;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        margin: auto 0%;
+        position: absolute;
+        color: #ffffff;
+    }
+
+    #imgsobre
+    {
+        grid-area: imgsobre;
+        grid-row: 1/4;
+        grid-column: 1/3;
+    }
+
+    .negocio
+    {
+        grid-area: sobres;
+        grid-row: 1/2;
+        grid-column: 3/3;
+        margin: .3%;
+        z-index: 4;
+    }
+
+    .missao
+    {
+        grid-area: sobres;
+        grid-row: 2/2;
+        grid-column: 3/3;
+        margin: .3%;
+        z-index: 3;
+    }
+
+    .visao
+    {
+        grid-area: sobres;
+        grid-row: 3/3;
+        grid-column: 3/3;
+        margin: .3%;
+        z-index: 2;
+    }
+
+    .valores
+    {
+        grid-area: sobres;
+        grid-row: 4/4;
+        grid-column: 3/3;
+        margin: .3%;
+        z-index: 1;
+    }
+
+    /*_______________________________________________________________________________cards*/
+    #proserv, #serv
+    {
+        display: block;
+        max-width: 693px;
+        margin: 0% auto;
+    }
+
+    .cardDuro
+    {
+        display: inline-block;
+        vertical-align: top;
+        height: 433px;
+        width: 270px;
+        margin: 1% auto;
+    }
+
+    .cardExpand-body
+{
+    padding: 3%;
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+    width: 27%;
+}
+
+    /*_______________________________________________________________________________rodape*/
+    .links
+    {
+        display: block;
+        width: 540px;
+        margin: 0% auto;
+    }
+
+    .links a img:hover
+    {
+        width: 96px;
+    }
+
+    .links a img
+    {
+        margin: 1.8% 7.2%;
+        border-radius: 50%;
+        width: 90px;
+    }
+
+}
+
+
+@media (min-width: 999px)
+{
+    header
+    {
+        height: 100%;
+        background-size: 36%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: black;
+        background-image: url(../../elementos/imgs/Logot.png);
+        animation: logoIntro .9s alternate;
+        animation-delay: .9s;
+    }
+
+    nav
+    {
+        max-width: 300px;
+    }
+
+    section
+    {
+        max-width: 1008px;
+        margin: auto;
+    }
+/*___________________________________________________________________________________menu*/
+.menu
+{
+    width: 270px;
+    padding: 1.5% 0%;
+    position:absolute;
+    left: 72%;
+}
+
+.menu >span
+{
+    display: none;
+}
+
+.menuContent
+{
+    display: block;
+}
+.menuContent > li
+{
+    padding: 1.08%;
+    display: inline-block;
+    margin: 1%;
+}
+
+.menuContent > li:hover
+{
+    font-size: 1.17em;
+    transition-duration: .6s;
+}
+
+
+
+/*__________________________________________________________________________________sobre*/
+    #sobre
+    {
+        display: grid;
+        grid-template-areas: "imgsobre","sobres";
+        grid-template-rows: 18%  24% 24% 24%;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    #sobre > h2
+    {
+        grid-area: sobres;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        margin: auto 0%;
+        position: absolute;
+        color: #ffffff;
+    }
+
+    #imgsobre
+    {
+        grid-area: imgsobre;
+        grid-row: 1/4;
+        grid-column: 1/3;
+    }
+
+    .negocio
+    {
+        grid-area: sobres;
+        grid-row: 1/2;
+        grid-column: 3/3;
+        margin: .3%;
+        z-index: 4;
+    }
+
+    .missao
+    {
+        grid-area: sobres;
+        grid-row: 2/2;
+        grid-column: 3/3;
+        margin: .3%;
+        z-index: 3;
+    }
+
+    .visao
+    {
+        grid-area: sobres;
+        grid-row: 3/3;
+        grid-column: 3/3;
+        margin: .3%;
+        z-index: 2;
+    }
+
+    .valores
+    {
+        grid-area: sobres;
+        grid-row: 4/4;
+        grid-column: 3/3;
+        margin: .3%;
+        z-index: 1;
+    }
+
+    /*_______________________________________________________________________________cards*/
+    #proserv, #serv
+    {
+        display: block;
+        max-width: 1008px;
+        margin: 0% 9%;
+    }
+
+    .cardExpand-body
+    {
+        padding: 3%;
+        background-color: #ffffff;
+        display: none;
+        position: absolute;
+        right: 6%;
+        width: 21%;
+    }
+
+    .cardDuro
+    {
+        vertical-align: top;
+        height: 405px;
+        width: 360px;
+        margin: 1% 1%;
+    }
+
+    /*_______________________________________________________________________________rodape*/
+    .links
+    {
+        display: inline-block;
+        width: 540px;
+        margin: 0 21%;
+    }
+
+    .links a img
+    {
+        margin: 1.8% 7.2%;
+        border-radius: 50%;
+        width: 90px;
+    }
+
+
+}
