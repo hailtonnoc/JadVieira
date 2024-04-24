@@ -31,13 +31,11 @@ address
 header
 {
     height: 100%;
-    background-image: url(../../elementos/imgs/Logot.png);
-    background-size: 90%;
-    background-repeat: no-repeat;
+    background-image: url(https://i.giphy.com/icJteR2iFWV0ZBy3AY.webp);
+    background-size: 21%;
+    background-repeat: repeat;
     background-position: center;
     background-color: black;
-    animation: logoIntro .9s alternate;
-    animation-delay: .9s;
 }
 
 html,
@@ -281,13 +279,11 @@ a:visited
     header
     {
         height: 100%;
-        background-size: 50.4%;
-        background-repeat: no-repeat;
+        background-size: 21.1%;
+        background-repeat: repeat;
         background-position: center;
         background-color: black;
-        background-image: url(../../elementos/imgs/Logot.png);
-        animation: logoIntro .9s alternate;
-        animation-delay: .9s;
+        background-image: url(https://i.giphy.com/icJteR2iFWV0ZBy3AY.webp);
     }
 
     nav
@@ -445,13 +441,11 @@ a:visited
     header
     {
         height: 100%;
-        background-size: 36%;
+        background-size: 21%;
         background-repeat: no-repeat;
         background-position: center;
         background-color: black;
-        background-image: url(../../elementos/imgs/Logot.png);
-        animation: logoIntro .9s alternate;
-        animation-delay: .9s;
+        background-image: url(https://i.giphy.com/icJteR2iFWV0ZBy3AY.webp);
     }
 
     nav
