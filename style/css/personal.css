@@ -201,10 +201,11 @@ ul
     width: 69%;
     height: 30vh;
     position: absolute;
-    top: 83%;
+    top: 81%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 0.9em;
+    margin: 0%;
 }
 
 .btn369
