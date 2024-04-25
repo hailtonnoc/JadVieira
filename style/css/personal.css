@@ -26,14 +26,15 @@ html::-webkit-scrollbar-thumb:hover
     font-size: 550%;
     position: absolute;
     margin: 0%;
-    top: 9.9%;
+    top: 7.5%;
     left: 7%;
     background-color: black;
     padding: 4.5%;
     z-index: 0;
-    height: 24vh;
+    height: 27vh;
     width: 80%;
     text-align: center;
+    border-radius: 18px;
 
 }
 
