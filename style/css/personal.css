@@ -76,6 +76,15 @@ padding: 10px
     text-align: center;
 }
 
+.poster
+{
+    background-color: #ffffff;
+    padding: 6%;
+    font-size: 1.41em;
+    margin-bottom: 3%;
+    margin-top: 15%;
+}
+
 
 /* ____________________________________________________________________max-320-width */
 
@@ -231,12 +240,7 @@ ul
 }
 /* __________________________________________________________________________poster */
 
-.poster
-{
-    background-color: #ffffff;
-    padding: 6%;
-    font-size: 1.41em;
-}
+
 
 /* __________________________________________________________________________cards */
 .cardExpand
