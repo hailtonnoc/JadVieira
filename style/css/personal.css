@@ -344,6 +344,9 @@ footer
     background: rgb(0, 0, 0);
     padding: 1.5%;
     margin-top: 36%;
+    border-radius: 18px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
 }
 
 a:link
