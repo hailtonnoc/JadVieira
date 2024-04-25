@@ -26,7 +26,10 @@ html::-webkit-scrollbar-thumb:hover
     font-size: 550%;
     position: absolute;
     top: 18%;
-    left: 27%;
+    left: 21%;
+    background-color: black;
+    padding: 4.5%;
+
 }
 
 /**/
@@ -193,13 +196,12 @@ ul
 .banner369
 {
     color: whitesmoke;
-    background-color: #80808027;
-    padding: 9px;
-    padding-bottom: 0px;
+    background-color: #000000;
+    padding: 12px;
     width: 69%;
-    height: 18vh;
+    height: 30vh;
     position: absolute;
-    top: 90%;
+    top: 83%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 0.9em;
