@@ -25,10 +25,14 @@ html::-webkit-scrollbar-thumb:hover
     color:#b727bc;
     font-size: 550%;
     position: absolute;
-    top: 18%;
-    left: 21%;
+    margin: 0%;
+    top: 9.9%;
+    left: 18%;
     background-color: black;
     padding: 4.5%;
+    z-index: 0;
+    height: 24vh;
+    width: 5em;
 
 }
 
