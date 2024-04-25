@@ -25,7 +25,7 @@ html::-webkit-scrollbar-thumb:hover
     color:#b727bc;
     font-size: 550%;
     position: absolute;
-    top: 27%;
+    top: 18%;
     left: 27%;
 }
 
@@ -50,8 +50,8 @@ flex-direction: column;
 .top-left,
 .top-right,
 .bottom-center {
-width: 159px;
-height: 159px;
+width: 168px;
+height: 168px;
 background-color: white;
 border-radius: 50%;
 padding: 10px
