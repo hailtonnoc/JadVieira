@@ -32,7 +32,8 @@ html::-webkit-scrollbar-thumb:hover
     padding: 4.5%;
     z-index: 0;
     height: 24vh;
-    width: 5em;
+    width: 80%;
+    text-align: center;
 
 }
 
@@ -176,12 +177,15 @@ ul
     display: inline-block;
     position: relative;
     left: 80.1%;
+    background-color: #000000;
 }
 
 .menuContent
 {
     display: none;
     padding: 0%;
+    padding: 4%;
+    padding-left: 6%;
 }
 
 .menuContent > li
