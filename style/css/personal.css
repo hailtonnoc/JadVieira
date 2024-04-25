@@ -191,6 +191,7 @@ ul
 .menuContent > li
 {
     margin: 15%;
+    z-index: 3;
 }
 
 .menu:hover .menuContent
