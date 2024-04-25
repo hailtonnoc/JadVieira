@@ -23,10 +23,10 @@ html::-webkit-scrollbar-thumb:hover
 
 #nome{
     color:#b727bc;
-    font-size: 500%;
+    font-size: 550%;
     position: absolute;
-    top: 0%;
-    left: 36%;
+    top: 27%;
+    left: 27%;
 }
 
 /**/
