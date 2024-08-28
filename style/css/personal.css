@@ -95,6 +95,76 @@ padding: 10px
 }
 
 
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 1%;
+    margin-left: 0%;
+    color: #ffffff;
+    text-align: center;
+    }
+    
+    .carousel {
+    display: flex;
+    transition: transform 1.2s ease; /* Adiciona transição suave */
+    }
+    
+    .carousel-item {
+    width: 100vw; /* Cada item ocupa 100% da largura da viewport */
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.527) 6px 6px 4.5px;
+    font-size: 1em;
+    flex-shrink: 0;
+    color: black;
+    padding-top: 3%;
+    
+    }
+    
+    .carousel-item *
+    {
+        padding-left: 3%;
+    }
+    
+    .carousel-item a {
+        color: black;
+        font-weight: bolder;
+    }
+    
+    .carousel-item p {
+        width: 90%;
+    }
+
+    .carousel-item > img {
+        width: 25%;
+        position: relative;
+        left: -18%;
+        border-radius: 9px;
+    }
+
+details
+{
+    background-color: #ffffff;
+    border-radius: 12px;
+    width: 90%;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.54);
+    padding: 1%;
+    text-align: center;
+    display: flex;
+}
+
+summary
+{
+    font-size: 1.62em;
+    font-weight: bolder;
+    margin: 3%;
+}
+
 /* ____________________________________________________________________max-320-width */
 
 address
