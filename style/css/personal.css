@@ -260,13 +260,13 @@ ul
 .nomeprincipal
 {
     font-family: 'Prata', serif;
-    color: #b727bc;
+    color: var(--laranja);
     font-size: 1.8em;
 }
 .nomeprincipal i small
 {
     font-family: 'Prata', serif;
-    color: #b727bc;
+    color: var(--laranja);
 }
 
 
@@ -435,7 +435,7 @@ ul
 footer
 {
     text-align: center;
-    color: #b727bc;
+    color: var(--laranja);
     background: rgb(0, 0, 0);
     padding: 1.5%;
     margin-top: 27%;
