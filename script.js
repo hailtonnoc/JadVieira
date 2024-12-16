@@ -1,3 +1,33 @@
+//__________________________________________________________________________________MOVE IMG LOGO
+
+document.addEventListener('DOMContentLoaded', function(){
+var imgLogo = document.getElementById('logo')
+const tempo = 1000
+logoAtual = 0
+
+function trocaImg(){
+
+// Esperar 3 segundos
+setTimeout(() => {
+    imgLogo.setAttribute('src','/elementos/imgs/logo-geo-web.svg')
+    console.log("Hello, world!");
+    setTimeout(() => {
+        imgLogo.setAttribute('src','/elementos/imgs/logo-pixo-web.svg')
+        console.log("Hello, world!");
+        setTimeout(()=>{
+            imgLogo.setAttribute('src','/elementos/imgs/logo-real-web.svg')
+        }, 4500)
+    }, tempo);
+}, tempo);
+
+}
+
+trocaImg();
+});
+
+
+
+//__________________________________________________________________________________Carrousel
 document.addEventListener('DOMContentLoaded', function () {
 const carousel = document.querySelector('.carousel');
 const items = document.querySelectorAll('.carousel-item');
@@ -74,3 +104,5 @@ carousel.addEventListener('touchend', handleTouchEnd, false);
 // Inicia o carrossel
 moveCarousel();
 });
+
+

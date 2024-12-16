@@ -4,9 +4,7 @@
     --verdeEscuro:#197330;
     --verdeMedio:#3BBF4F;
     --verdeClaro:#9AF28D;
-
 }
-
 
 html::-webkit-scrollbar
 {
@@ -50,7 +48,6 @@ html::-webkit-scrollbar-thumb:hover
     width: 80%;
     text-align: center;
     border-radius: 18px;
-
 }
 
 /**/
