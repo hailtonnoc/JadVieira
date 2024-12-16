@@ -32,7 +32,9 @@ html::-webkit-scrollbar-thumb:hover
 
 #logo{
     position: relative;
-    width: 100%;
+    width: 72%;
+    top: 10%;
+    left: -4%;
 }
 
 #nome{
@@ -457,7 +459,6 @@ a:visited
     header
     {
         height: 100%;
-        background-size: 60%;
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -509,6 +510,9 @@ a:visited
         transition-duration: .6s;
     }
 
+    #logo{
+        left: 0%;
+    }
 
 
 /*__________________________________________________________________________________sobre*/
