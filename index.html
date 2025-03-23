@@ -13,16 +13,28 @@
     gtag('js', new Date());
 
     gtag('config', 'G-CWTGMG88BJ'); 
-</script>-->
+    </script>-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/css/personal.css">
     <link rel="shortcut icon" href="elementos/imgs/favicon.ico" type="image/x-icon">
-    <script src="/script.js"></script>
+    <style>
+        /* Override para remover estilos de lazy-loading */
+        .click-to-play {
+            display: none !important;
+        }
+        .lazy-video {
+            cursor: pointer;
+        }
+        @media (max-width: 576px) {
+            .click-to-play {
+                display: none !important;
+            }
+        }
+    </style>
     <title>Jad Marketing Digital</title>
 </head>
 <body>
-
     <header>
         <!--video class="mrkt-inicial" src="/elementos/vids/market.mp4" autoplay loop muted preload></video-->
         <nav class="menu">
@@ -35,73 +47,123 @@
             </ul>
         </nav>
 
-        <img id="logo" src="/elementos/imgs/logo-real-web.svg" alt="">
-
-        <div class="banner">
-            <p><q>Seja a mudança que você quer ver no mundo.</q>
-                <small id="nomeford"><i>Mahatma Gandhi</i></small></p>
-            <button class="btn"><a href="#contato">Contate-me</a></button>
+        <div class="logo-container">
+            <img id="logo" src="elementos/imgs/logo-real-web.svg" alt="Logo Jad Marketing Digital">
         </div>
 
+        <div class="banner">
+            <div class="banner-content">
+                <p><q>Seja a mudança que você quer ver no mundo.</q>
+                    <small id="nomeford"><i>Mahatma Gandhi</i></small></p>
+                <button class="btn"><a href="#contato">Contate-me</a></button>
+            </div>
+        </div>
     </header>
-    <br>
-    <main>
 
-    <div class="sobre" id="sobre">
-        <h2>Sobre</h2>
-        <img src="/elementos/imgs/JDsobre.jpg" alt="">
-        <p>Olá, sou Jad Vieira, empreendedora de Marketing Digital, uma profissional
-        dedicada e competente que está constantemente se especializando na área e
-        desenvolvendo soluções relevantes e mensuráveis nos negócio.</p>
-    </div>
+    <main>
+        <section class="sobre" id="sobre">
+            <h2>Sobre</h2>
+            <img src="/elementos/imgs/JDsobre.jpg" alt="Foto Jad Vieira">
+            <p>Olá, sou Jad Vieira, empreendedora de Marketing Digital, uma profissional
+            dedicada e competente que está constantemente se especializando na área e
+            desenvolvendo soluções relevantes e mensuráveis nos negócio.</p>
+        </section>
+
         <section class="container">
             <div class="top-left">
-                <h3>Missão:</h3>
-                <p>Levo como proposito transmitir para o mundo a beleza das coisas que não percebemos,
-                fazer as pessoas verem o quão são especiais e importantes. Gerar valor ao publico.</p>
+                <h3>Missão</h3>
+                <p>Transmitir a beleza das coisas que passam despercebidas. Fazer as pessoas verem seu valor e importância. Gerar valor ao público.</p>
             </div>
             <div class="top-right">
-                <h3>Visão:</h3>
-                <p>Ser referencia global de marketing e fazer a diferença nos negócios de cada um,
-                ser reconhecida pelas soluções mais eficazes.</p>
+                <h3>Visão</h3>
+                <p>Ser referência global de marketing, fazer a diferença nos negócios e ser reconhecida pelas soluções mais eficazes.</p>
             </div>
             <div class="bottom-center">
-                <h3>Valores:</h3>
+                <h3>Valores</h3>
                 <p>Eficiência, inovação, flexibilidade, assertividade, resultados, ética e transparência.</p>
             </div>
         </section>
 
-        <div class="poster">
-            <h3>Experiência de Marketing Digital em diversos modelos de negócios.</h3>
+        <section class="poster">
+            <h3>Experiência de Marketing Digital em diversos modelos de negócios</h3>
             <p>Me conte sobre seu negocio e eu apresento ele ao mundo 🌎🧡</p>
-        </div>
+        </section>
 
-        <section>
-            <div  id="servico">
-                <h2>Composições </h2>
+        <section class="portfolio">
+            <div id="servico">
+                <h2>Composições</h2>
                 <p>Como já contribui com meus clientes? 😃</p>
             </div>
-            <details class="entregas">
+            <details class="Contabilidade369">
                 <summary>Contabilidade 369</summary>
-                <div>
+                <div class="details-content">
                     <h3>Aplicações de Social Mídia</h3>
-                    <p>A Contabilidade 369 buscou os serviços de reforço de marca.
-                    </p>
+                    <p>A Contabilidade 369 buscou os serviços de reforço de marca.</p>
                     <div class="carousel-container">
                         <div class="carousel">
                             <div class="carousel-item">
-                                <img src="/elementos/imgs/imgs_portf/369/WhatsApp Image 2024-07-08 at 19.22.19.jpeg" alt="" srcset="">
+                                <img src="/elementos/imgs/imgs_portf/369/WhatsApp Image 2024-07-08 at 19.22.19.jpeg" alt="Imagem 1 Contabilidade 369">
                             </div>
                             <div class="carousel-item">
-                                <img src="/elementos/imgs/imgs_portf/369/WhatsApp Image 2024-07-02 at 14.00.58.jpeg" alt="" srcset="">
+                                <img src="/elementos/imgs/imgs_portf/369/WhatsApp Image 2024-07-02 at 14.00.58.jpeg" alt="Imagem 2 Contabilidade 369">
                             </div>
                             <div class="carousel-item">
-                                <img src="/elementos/imgs/imgs_portf/369/WhatsApp Image 2024-07-01 at 22.41.48.jpeg" alt="" srcset="">
+                                <img src="/elementos/imgs/imgs_portf/369/WhatsApp Image 2024-07-01 at 22.41.48.jpeg" alt="Imagem 3 Contabilidade 369">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/elementos/imgs/imgs_portf/369/natalina.jpeg" alt="Imagem 4 Contabilidade 369">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/elementos/imgs/imgs_portf/369/dicas.jpeg" alt="Imagem 5 Contabilidade 369">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/elementos/imgs/imgs_portf/369/gostei.jpeg" alt="Imagem 6 Contabilidade 369">
                             </div>
                         </div>
-                    <div>
-                        <img class="cartaoDigital" src="/elementos/imgs/pexels-pixabay-265087.jpg" alt="">
+                        <div class="carousel-controls">
+                            <button class="carousel-prev">&#10094;</button>
+                            <button class="carousel-next">&#10095;</button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <!-- Indicators serão adicionados dinamicamente pelo JavaScript -->
+                        </div>
                     </div>
+                    <div class="cartao-digital-container">
+                        <h3>Cartão Digital</h3>
+                        <p>Baixe o cartão digital da Contabilidade 369 🔻</p>
+                        <a href="elementos/docs/369/Cartao digital 396 assessoria contabil.pdf" type="application/pdf" target="_blank" rel="noopener noreferrer"><img class="cartaoDigital" src="/elementos/imgs/imgs_portf/369/cardDigital.png" alt="Cartão Digital"></a>
+                    </div>
+                </div>
+            </details>
+            <details class="ourochoopp">
+                <summary>Ouro Chopp</summary>
+                <div class="details-content">
+                    <h3>Aplicações de Social Mídia</h3>
+                    <p>A Ouro Chopp solicitou os serviços de divulgação de serviços e produtos e reforço da identidade da marca.</p>
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <div class="carousel-item">
+                                <img src="elementos/imgs/imgs_portf/ourochopp/divg_1.jpeg" alt="Imagem 1 Ouro Chopp">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="elementos/imgs/imgs_portf/ourochopp/divg_2.jpeg" alt="Imagem 2 Ouro Chopp">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="elementos/imgs/imgs_portf/ourochopp/divg_3.jpeg" alt="Imagem 3 Ouro Chopp">
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-prev">&#10094;</button>
+                            <button class="carousel-next">&#10095;</button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <!-- Indicators serão adicionados dinamicamente pelo JavaScript -->
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <h3>Apresentação Comercial da Marca</h3>
+                        <p>Aqui foi abordado tipos de serviços, história da marca e qualidades e onde encontrar a marca.</p>
+                        <video src="elementos/vids/ourochopp/vd_ourochopp.mp4" controls poster="elementos/imgs/imgs_portf/ourochopp/CAPA DO VIDEO.png" style="max-width: 90%; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer; transition: transform 0.3s ease;"></video>
                     </div>
                 </div>
             </details>
@@ -111,7 +173,7 @@
             <h2>Propostas</h2>
 
             <figure class="cardDuro">
-                <img class="img99" src="elementos/imgs/estrat.jpg" alt="contador by Pixabay">
+                <img class="img99" src="elementos/imgs/estrat.jpg" alt="Estratégias Digitais">
                 <div class="cardDuro-body">
                     <h3>Estratégias Digitais ⚡</h3>
                     <p>Compromisso total, tornando seus sonhos realidade. Entendemos o desafio de se destacar em um mercado digital competitivo e em constante mudança. Enquanto você foca em inovar no seu negócio, nós cuidamos de simplificar o caminho para o sucesso online.</p>
@@ -119,11 +181,11 @@
             </figure>
 
             <figure class="cardDuro">
-            <img class="img99" src="elementos/imgs/pexels-pixabay-265087.jpg" alt="contador by Pixabay">
-            <div class="cardDuro-body">
-                <h3>Otimização de Dados para Resultados 📈</h3>
-                <p>Analisamos os dados do seu negócio para apresentar informações de forma intuitiva aos clientes, facilitando a tomada de decisões estratégicas.</p>
-            </div>
+                <img class="img99" src="elementos/imgs/pexels-pixabay-265087.jpg" alt="Otimização de Dados">
+                <div class="cardDuro-body">
+                    <h3>Otimização de Dados para Resultados 📈</h3>
+                    <p>Analisamos os dados do seu negócio para apresentar informações de forma intuitiva aos clientes, facilitando a tomada de decisões estratégicas.</p>
+                </div>
             </figure>
         </section>
 
@@ -131,57 +193,69 @@
             <h2>Serviços</h2>
 
             <figure class="cardDuro">
-                <img class="img99" src="elementos/imgs/on.jpg" alt="contador by Pixabay">
+                <img class="img99" src="elementos/imgs/on.jpg" alt="Marketing de Conteúdo">
                 <div class="cardDuro-body">
                     <h3>Marketing de Conteúdo 🤩</h3>
-                    <p>Envolver seu público-alvo nunca foi tão fácil. Com nosso marketing de conteúdo, você pode criar uma conexão genuína com seus clientes por meio de conteúdo relevante e valioso, impulsionando o engajamento e o reconhecimento da marca. </p>
+                    <p>Envolver seu público-alvo nunca foi tão fácil. Com nosso marketing de conteúdo, você pode criar uma conexão genuína com seus clientes por meio de conteúdo relevante e valioso, impulsionando o engajamento e o reconhecimento da marca.</p>
                 </div>
             </figure>
 
             <figure class="cardDuro">
-            <img class="img99" src="elementos/imgs/contabil.jpg" alt="contador by Pixabay">
-            <div class="cardDuro-body">
-                <h3>Gestão de Redes Sociais 👍🏼</h3>
-                <p>Conecte-se com sua audiência de forma autêntica e construa relacionamentos sólidos por meio das redes sociais. Nossa gestão de redes sociais ajuda a aumentar a interação com os seguidores e a promover sua marca de maneira eficaz.</p>
-            </div>
+                <img class="img99" src="elementos/imgs/contabil.jpg" alt="Gestão de Redes Sociais">
+                <div class="cardDuro-body">
+                    <h3>Gestão de Redes Sociais 👍🏼</h3>
+                    <p>Conecte-se com sua audiência de forma autêntica e construa relacionamentos sólidos por meio das redes sociais. Nossa gestão de redes sociais ajuda a aumentar a interação com os seguidores e a promover sua marca de maneira eficaz.</p>
+                </div>
             </figure>
 
             <figure class="cardDuro">
-            <img class="img99" src="elementos/imgs/on.jpg" alt="contador by Pixabay">
-            <div class="cardDuro-body">
-                <h3>Campanhas de Links Patrocinados 🔗</h3>
-                <p>Alcance seu público-alvo de maneira direcionada e eficiente com campanhas de links patrocinados. Aumente as conversões e o retorno sobre o investimento com anúncios valorosos e atrativos.</p>
-            </div>
+                <img class="img99" src="elementos/imgs/on.jpg" alt="Campanhas de Links Patrocinados">
+                <div class="cardDuro-body">
+                    <h3>Campanhas de Links Patrocinados 🔗</h3>
+                    <p>Alcance seu público-alvo de maneira direcionada e eficiente com campanhas de links patrocinados. Aumente as conversões e o retorno sobre o investimento com anúncios valorosos e atrativos.</p>
+                </div>
             </figure>
             
             <figure class="cardDuro">
-            <img class="img99" src="elementos/imgs/financa.jpg" alt="contador by Pixabay">
-            <div class="cardDuro-body">
-                <h3>Estratégias de Marketing 🚀</h3>
-                <p>Investimos em estratégias de marketing de conteúdo para atrair tráfego orgânico e aumentar a autoridade do seu site. Produzimos conteúdo relevante e otimizado para SEO, como blogs, vídeos e infográficos, que podem impulsionar o posicionamento nos resultados de pesquisa.</p>
-            </div>
+                <img class="img99" src="elementos/imgs/financa.jpg" alt="Estratégias de Marketing">
+                <div class="cardDuro-body">
+                    <h3>Estratégias de Marketing 🚀</h3>
+                    <p>Investimos em estratégias de marketing de conteúdo para atrair tráfego orgânico e aumentar a autoridade do seu site. Produzimos conteúdo relevante e otimizado para SEO, como blogs, vídeos e infográficos, que podem impulsionar o posicionamento nos resultados de pesquisa.</p>
+                </div>
             </figure>
-
         </section>
 
         <section id="contato">
-            <h2 id="contato">Contato</h2>
+            <h2>Contato</h2>
             <div class="links">
-                <a href="https://wa.me/5511988762514"><img src="elementos/imgs/wpp.png" alt="whatsapp logo"></a>
-                <a href="mailto:jad2014vierira@hotmail.com"><img src="elementos/imgs/email.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/jad-vieira-1517a0203/" target="_blank" rel="linkedin"><img src="elementos/imgs/in2.png" alt=""></a>
+                <a href="https://wa.me/5511988762514">
+                    <img src="elementos/imgs/wpp.png" alt="WhatsApp">
+                    <span>WhatsApp</span>
+                </a>
+                <a href="mailto:jad2014vierira@hotmail.com">
+                    <img src="elementos/imgs/email.png" alt="Email">
+                    <span>E-mail</span>
+                </a>
+                <a href="https://www.linkedin.com/in/jad-vieira-1517a0203/" target="_blank" rel="noopener">
+                    <img src="elementos/imgs/in2.png" alt="LinkedIn">
+                    <span>LinkedIn</span>
+                </a>
             </div>
         </section>
-        
     </main>
 
     <footer>
-        <h2 class="nomeprincipal">Jad Vieira Marketing Digital</h2><br>
+        <h2 class="nomeprincipal">Jad Vieira Marketing Digital</h2>
         <address>    
-            São Paulo, SP <br>
-            <a href="tel:+5511988762514">cel: 11 98876-2514</a>
+            🌎São Paulo, SP <br>
+            <a href="tel:+5511988762514">📞cel: 11 98876-2514</a>
         </address>
     </footer>
-
+    
+    <div class="hailton">
+        <a href="https://hailton-oliveira.vercel.app/" target="_blank" rel="noopener noreferrer">Desenvolvido por <strong>Hailton Oliveira</strong> ©</a>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

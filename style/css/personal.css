@@ -1,669 +1,1229 @@
 /*Palheta de cores*/
 :root{
     --laranja:#F28705;
+    --roxo:#6F3BBF;
     --verdeEscuro:#197330;
     --verdeMedio:#3BBF4F;
     --verdeClaro:#9AF28D;
+    --transparencia-branca: rgba(255, 255, 255, 0.9);
+    --sombra-padrao: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-html::-webkit-scrollbar
-{
+/* Estilos de barra de rolagem */
+html::-webkit-scrollbar {
     width: 9px;
 }
 
-html::-webkit-scrollbar-track
-{
+html::-webkit-scrollbar-track {
     background-color: rgb(0, 0, 0);
 }
 
-html::-webkit-scrollbar-thumb
-{
+html::-webkit-scrollbar-thumb {
     background: var(--verdeEscuro);
     border-radius: 0px;
     height: 3px;
 }
 
-html::-webkit-scrollbar-thumb:hover
-{
-    background:var(--verdeClaro)
+html::-webkit-scrollbar-thumb:hover {
+    background:var(--roxo)
 }
 
-#logo{
+/* Reset básico e estilos gerais */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prata', serif;
+    background: linear-gradient(to right, var(--verdeClaro) 18%, var(--verdeEscuro));
+    overflow-x: hidden;
+}
+
+/* Estilos de cabeçalho */
+header {
     position: relative;
-    width: 72%;
-    top: 10%;
-    left: -4%;
-}
-
-#nome{
-    color:#e282e6;
-    font-size: 550%;
-    position: absolute;
-    margin: 0%;
-    top: 24%;
-    left: 7%;
-    padding: 1.8%;
-    z-index: 0;
-    height: 27vh;
-    width: 80%;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
     text-align: center;
-    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
-/**/
+/* Estilos para o container do logo */
+.logo-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    position: relative;
+}
+
+#logo {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    object-fit: contain;
+}
+
+@keyframes logoEntrance {
+    0% {
+        transform: scale(0.8) translateY(30px);
+        opacity: 0;
+        filter: blur(5px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+#logo:hover {
+    transform: none;
+    filter: none;
+}
+
+/* Banner */
+.banner {
+    display: none;
+    width: 100%;
+    background: linear-gradient(to right, rgba(25, 115, 48, 0.95), rgba(0, 0, 0, 0.9), rgba(242, 135, 5, 0.95));
+    color: white;
+    padding: 25px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner p {
+    font-size: 1.7em;
+    margin: 0 0 25px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.banner q {
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+}
+
+.banner q:before,
+.banner q:after {
+    color: var(--laranja);
+    font-size: 1.2em;
+}
+
+#nomeford {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8em;
+    text-align: right;
+    opacity: 0.9;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Menu de navegação */
+.menu {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu > span {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu > span img {
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+
+.menu:hover {
+    background-color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu:hover > span {
+    transform: rotate(90deg);
+}
+
+.menuContent {
+    display: none;
+    list-style: none;
+    padding: 10px 0 0;
+    margin: 10px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menuContent > li {
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.menuContent > li a {
+    color: var(--verdeEscuro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: block;
+}
+
+.menuContent > li a:hover {
+    color: var(--laranja);
+    background-color: rgba(249, 249, 249, 0.8);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu:hover .menuContent {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seção sobre */
+.sobre {
+    background-color: #ffffff;
+    padding: 40px 5%;
+    margin: 20px auto;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--sombra-padrao);
+    max-width: 1000px;
+}
+
+.sobre img {
+    width: 30%;
+    max-width: 250px;
+    min-width: 150px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 5px solid var(--roxo);
+    box-shadow: var(--sombra-padrao);
+    transition: transform 0.3s ease;
+}
+
+.sobre img:hover {
+    transform: scale(1.05);
+}
+
+.sobre p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container principal para missão, visão e valores */
 .container {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-height: 100vh;
-}
-
-.container > div {
-margin: 6px;
-padding: 9%;
-display: flex;
-align-items: center;
-flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
 }
 
 .top-left,
 .top-right,
 .bottom-center {
-width: 195px;
-height: 195px;
-background-color: white;
-border-radius: 50%;
-padding: 10px
+    width: 260px;
+    height: 260px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: var(--sombra-padrao);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+.top-left:hover,
+.top-right:hover,
+.bottom-center:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .top-left h3,
 .top-right h3,
-.bottom-center h3,
+.bottom-center h3 {
+    margin: 0 0 8px;
+    color: var(--verdeEscuro);
+    font-size: 1.6em;
+    position: relative;
+}
+
+.top-left h3:after,
+.top-right h3:after,
+.bottom-center h3:after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--laranja);
+    border-radius: 3px;
+}
+
+/* Ajuste para melhorar a scrollbar dentro dos círculos */
+.top-left p::-webkit-scrollbar,
+.top-right p::-webkit-scrollbar,
+.bottom-center p::-webkit-scrollbar {
+    width: 4px;
+}
+
+.top-left p::-webkit-scrollbar-track,
+.top-right p::-webkit-scrollbar-track,
+.bottom-center p::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.top-left p::-webkit-scrollbar-thumb,
+.top-right p::-webkit-scrollbar-thumb,
+.bottom-center p::-webkit-scrollbar-thumb {
+    background: var(--laranja);
+    border-radius: 10px;
+}
+
 .top-left p,
 .top-right p,
 .bottom-center p {
-    margin:0;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+    color: #444;
+    max-height: none;
+    overflow-y: visible;
 }
 
-.sobre{
+/* Remover os estilos de scrollbar que não serão mais necessários */
+.top-left p::-webkit-scrollbar,
+.top-right p::-webkit-scrollbar,
+.bottom-center p::-webkit-scrollbar,
+.top-left p::-webkit-scrollbar-track,
+.top-right p::-webkit-scrollbar-track,
+.bottom-center p::-webkit-scrollbar-track,
+.top-left p::-webkit-scrollbar-thumb,
+.top-right p::-webkit-scrollbar-thumb,
+.bottom-center p::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+/* Poster */
+.poster {
     background-color: #ffffff;
-    padding: 5%;
-    margin: 1%;
-    border-radius: 12px;
-    text-align: center
+    padding: 40px 5%;
+    margin: 30px auto;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--sombra-padrao);
+    max-width: 1000px;
 }
 
-.sobre img
-{
+.poster h3 {
+    color: var(--verdeEscuro);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.poster p {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Portfolio section */
+.portfolio {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Details e summary */
+details {
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    box-shadow: var(--sombra-padrao);
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+details.open {
+    padding-bottom: 30px;
+}
+
+summary {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 15px 0;
+    cursor: pointer;
+    color: var(--verdeEscuro);
+    outline: none;
+    position: relative;
+    list-style: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: var(--verdeEscuro);
+    transition: transform 0.3s ease;
+}
+
+details[open] summary:after {
+    content: '-';
+}
+
+details:hover summary {
+    background-color: rgba(111, 59, 191, 0.1);
+}
+
+.cartaoDigital {
     width: 30%;
+    max-width: 250px;
+    margin: 30px auto;
     display: block;
-    margin: auto;
-    border-radius: 50%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.poster
-{
-    background-color: #ffffff;
-    padding: 6%;
-    font-size: 1.41em;
-    margin-bottom: 3%;
-    margin-top: 15%;
+.cartaoDigital:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-
+/* Carrossel */
 .carousel-container {
     width: 100%;
-    overflow: hidden;
+    max-width: 800px;
+    margin: 30px auto;
     position: relative;
-    margin: 1%;
-    margin-left: 0%;
-    color: #ffffff;
-    text-align: center;
-    }
-    
-    .carousel {
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: var(--sombra-padrao);
+}
+
+.carousel {
     display: flex;
-    transition: transform 1.2s ease; /* Adiciona transição suave */
-    }
-    
-    .carousel-item {
-    width: 100vw; /* Cada item ocupa 100% da largura da viewport */
-    display: inline-block;
-    justify-content: center;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.527) 6px 6px 4.5px;
-    font-size: 1em;
-    flex-shrink: 0;
-    color: black;
-    padding-top: 3%;
-    
-    }
-    
-    .carousel-item *
-    {
-        padding-left: 3%;
-    }
-    
-    .carousel-item a {
-        color: black;
-        font-weight: bolder;
-    }
-    
-    .carousel-item p {
-        width: 90%;
-    }
-
-    .carousel-item > img {
-        width: 25%;
-        position: relative;
-        left: -36%;
-        border-radius: 9px;
-    }
-
-details
-{
-    background-color: #ffffff;
-    border-radius: 12px;
-    width: 90%;
-    margin-left: 3%;
-    margin-bottom: 3%;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.54);
-    padding: 1%;
-    text-align: center;
-    display: flex;
 }
 
-summary
-{
-    font-size: 1.62em;
-    font-weight: bolder;
-    margin: 3%;
+.carousel-item img {
+    max-width: 90%;
+    height: auto;
+    max-height: 70vh;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    object-fit: contain;
 }
 
-.cartaoDigital
-{
-    width: 25%;
-}
-/* ____________________________________________________________________max-320-width */
-
-address
-{
-    font-style:normal;
+/* Estilo específico para imagens do Ouro Chopp que são para mobile */
+.ourochoopp .carousel-item img {
+    max-width: 65%;
+    max-height: 70vh;
+    object-fit: contain;
 }
 
-.mrkt-inicial
-{
-    top: 0%;
+/* Estilos para o container de vídeo */
+.video-container {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-header
-{
-    height: 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
+    max-width: 800px;
+    margin: 30px auto;
     text-align: center;
 }
 
-html,
-body
-{
-    height: 100%;
-    margin: 0%;
-    background: linear-gradient(to right, var(--verdeClaro) 18%, var(--verdeEscuro));
+.video-container video {
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: var(--sombra-padrao);
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-h2
-{
-    font-family: 'Prata', serif;
-    color: rgba(0, 0, 0, 0.81);
-    font-size: 1.8em;
-    font-weight:500;
-    margin-top: 1%;
+.video-container video:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-h3
-{
-    font-family: 'Prata', serif;
-    color: rgba(0, 0, 0, 0.81);
-    font-size: 1.5em;
-    font-weight:500;
-    margin: .9%;
-}
-
-
-
-span
-{
-    color: white;
-}
-
-ul
-{
-    margin: 0%;
-}
-
-#nomePrincipal
-{
-    margin: 0%;
-}
-
-.nomeprincipal
-{
-    font-family: 'Prata', serif;
-    color: var(--laranja);
+.video-container h3 {
+    color: var(--verdeEscuro);
+    margin-bottom: 15px;
     font-size: 1.8em;
 }
-.nomeprincipal i small
-{
-    font-family: 'Prata', serif;
-    color: var(--laranja);
+
+.video-container p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #444;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-/* __________________________________________________________________________________menu */
-.menu
-{
-    display: inline-block;
-    position: relative;
-    top: -48%;
-    background-color: #00000071;
-    z-index: 10;
-    border-radius: 9px;
-    border-style: dashed;
-    border-color: #ffffff;
-}
-
-.menuContent
-{
-    display: none;
-    width: 15%;
-    padding: 0%;
-    padding: 4%;
-    padding-left: 6%;
-    left: -3%;
-}
-
-.menuContent > li
-{
-    margin: 15%;
-    z-index: 3;
-    text-align: right;
-
-}
-
-.menu:hover .menuContent
-{
-    display: block;
-
-}
-
-
-
-/* __________________________________________________________________________________banner */
-.banner
-{
-    color: whitesmoke;
-    background-color: #00000048;
-    width: 69%;
-    height: 12vh;
+.carousel-controls {
     position: absolute;
-    top: 81%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.9em;
-    margin: 0%;
-    border-radius: 18px;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 5;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
-.btn
-{
-    background: linear-gradient(to right, var(--laranja), #9c5703);
-    height: 36px;
-}
-
-.btn a
-{
-    text-decoration: none;
-}
-
-#nomeford
-{
-    display: inline-block;
-    float: right;
-    margin: 5.4%;
-}
-
-/* _________________________________________________________________________________sobre */
-
-.title
-{
-    font-family: 'Prata', serif;
-    color: rgba(0, 0, 0, 0.81);
-    font-size: 1.38em;
-    font-weight:500;
-}
-/* __________________________________________________________________________poster */
-
-
-
-/* __________________________________________________________________________cards */
-.cardExpand
-{
-    margin: 3% 0%;
-    width: 99%;
-}
-
-.cardExpand-heading
-{
-    background: linear-gradient(to right,rgba(0, 0, 0, 0.884) 1%, #67272d26 90% );
-    padding: .9%;
-    width: 99%;
-}
-
-.title
-{
-    color: white;
-}
-
-.cardExpand-body
-{
-    padding: 3%;
-    background-color: #ffffff;
-    display: none;
-    position: absolute;
-    right: .9%;
-    width: 90%;
-}
-
-.cardExpand:hover .cardExpand-body
-{
-    display: inline-block;
-}
-/* ___________________________________________________________________________________ */
-
-.cardDuro
-{
-    margin: 3% auto;
-    background-color: #ffffff;
-    width: 81%;
-    padding: 1%;
-    box-shadow: rgba(0, 0, 0, 0.527) 6px 6px 4.5px;
-}
-
-.cardDuro-body
-{
-    padding: 3%;
-}
-
-/*_________________________________________________________________________________Outros */
-
-
-.img99
-{
-    width: 99.9%
-}
-
-/* __________________________________________________________________________________Rodape */
-
-.links
-{
-    display: block;
-    width: 300px;
-    margin: 0% auto;
-    position: absolute;
-    left: 15%;
-}
-
-.links a img
-{
-    display: inline;
-    margin: 1.2% .3%;
+.carousel-prev,
+.carousel-next {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
     border-radius: 50%;
-    width: 90px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-footer
-{
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.indicator.active {
+    background-color: var(--verdeEscuro);
+    transform: scale(1.2);
+    border-color: white;
+}
+
+/* Cards */
+#proserv, #serv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#serv h2, #proserv h2, #servico h2 {
+    width: 100%;
     text-align: center;
-    color: var(--laranja);
-    background: rgb(0, 0, 0);
-    padding: 1.5%;
-    margin-top: 27%;
-    border-radius: 18px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: var(--verdeEscuro);
+    position: relative;
 }
 
-a:link
-{
-    color: whitesmoke;
+#serv h2:after, #proserv h2:after, #servico h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--laranja);
+    border-radius: 4px;
+}
+
+.cardDuro {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra-padrao);
+    transition: all 0.4s ease;
+    width: 300px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardDuro:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cardDuro-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img99 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.cardDuro:hover .img99 {
+    transform: scale(1.05);
+}
+
+.cardDuro h3 {
+    color: var(--verdeEscuro);
+    font-size: 1.6em;
+    margin: 0 0 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.cardDuro h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--laranja);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.cardDuro:hover h3:after {
+    width: 80px;
+}
+
+.cardDuro p {
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Contato */
+#contato {
+    padding: 50px 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: var(--sombra-padrao);
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#contato h2 {
+    color: var(--verdeEscuro);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#contato h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--laranja);
+    border-radius: 4px;
+}
+
+/* Links */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
+    color: var(--verdeEscuro);
+    transition: all 0.3s ease;
 }
-a:visited
-{color: whitesmoke;}
 
-/*____________________________________________________________________________Outras telas */
+.links a:hover {
+    transform: translateY(-8px);
+}
 
-@media (min-width: 630px)
-{
-    header
-    {
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
+.links a img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.links a:hover img {
+    background-color: var(--roxo);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--verdeEscuro);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 20px 20px 0 0;
+    margin-top: 50px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--laranja);
+}
+
+.nomeprincipal {
+    color: white;
+    margin: 0 0 20px;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+address {
+    font-style: normal;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+/* Media Queries */
+@media (min-width: 630px) {
+    nav {
+        position: sticky;
+        top: 0;
     }
 
-    nav
-    {
+    .menu > span {
+        display: block;
+        padding: 8px;
+    }
+
+    .menuContent > li {
+        margin: 15px 0;
+    }
+
+    .menuContent > li:hover {
+        transform: scale(1.1);
+    }
+
+    #logo {
+        width: 50%;
+    }
+
+    .cardDuro {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (min-width: 999px) {
+    section {
+        padding: 60px 40px;
+    }
+
+    footer {
+        padding: 40px 30px;
+    }
+
+    .menu {
+        padding: 20px;
+    }
+
+    .menu > span {
+        padding: 10px;
+    }
+
+    .menuContent {
+        padding: 15px 0;
+    }
+
+    .menuContent > li {
+        margin: 20px 0;
+    }
+
+    .menuContent > li:hover {
+        transform: scale(1.2);
+    }
+
+    .cardDuro {
+        width: calc(33.333% - 40px);
+    }
+
+    .container {
+        height: auto;
+        padding: 60px;
+        gap: 50px;
+    }
+    
+    .top-left,
+    .top-right,
+    .bottom-center {
+        width: 280px;
+        height: 280px;
+        padding: 25px;
+    }
+
+    .top-left p,
+    .top-right p,
+    .bottom-center p {
+        font-size: 0.9em;
+        line-height: 1.35;
+    }
+}
+
+/* Media queries para ajustar o header em diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    .logo-container {
+        padding-top: 60px;
+    }
+    
+    #logo {
+        width: 85%;
+    }
+    
+    .banner {
+        padding: 20px 0;
+    }
+    
+    .banner p {
+        font-size: 1.4em;
+        padding: 0 15px;
+    }
+    
+    .btn {
+        padding: 12px 28px;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+    }
+    
+    .carousel-prev, 
+    .carousel-next {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .cardDuro {
+        width: 100%;
         max-width: 450px;
     }
 
-    .mrkt-inicial
-    {
-        top:-1%
+    .top-left,
+    .top-right,
+    .bottom-center {
+        width: 240px;
+        height: 240px;
+        padding: 20px;
     }
 
-/*___________________________________________________________________________________menu*/
-    .menu
-    {
-        padding: 1%;
-        left: 69%;
-        top: -66%;
+    .top-left h3,
+    .top-right h3,
+    .bottom-center h3 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+    
+    .top-left p,
+    .top-right p,
+    .bottom-center p {
+        font-size: 0.9em;
+        line-height: 1.35;
     }
 
-    .menu:hover .menuContent
-    {
-        display: inline;
+    .ourochoopp .carousel-item img {
+        max-width: 75%;
+    }
+    
+    .video-container {
+        max-width: 95%;
+    }
+    
+    .video-container h3 {
+        font-size: 1.6em;
+    }
+    
+    .video-container p {
+        font-size: 0.95em;
+        max-width: 95%;
+    }
+}
 
+@media (max-width: 576px) {
+    .logo-container {
+        padding-top: 70px;
+    }
+    
+    #logo {
+        width: 90%;
+    }
+    
+    .banner {
+        padding: 15px 0;
+    }
+    
+    .banner p {
+        font-size: 1.1em;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .menu {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .menu > span img {
+        width: 30px;
+        height: 30px;
     }
 
-
-    .menu >span
-    {
-        display: none;
+    .container {
+        padding: 20px 10px;
+    }
+    
+    .sobre {
+        padding: 30px 15px;
+    }
+    
+    .sobre img {
+        width: 50%;
+    }
+    
+    .top-left,
+    .top-right,
+    .bottom-center {
+        width: 220px;
+        height: 220px;
+        padding: 15px;
+    }
+    
+    .top-left h3,
+    .top-right h3,
+    .bottom-center h3 {
+        font-size: 1.5em;
+    }
+    
+    .carousel-item {
+        padding: 15px;
+    }
+    
+    .carousel-controls {
+        padding: 0 5px;
+    }
+    
+    .carousel-prev,
+    .carousel-next {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .cardDuro {
+        margin: 10px 0;
+    }
+    
+    #contato {
+        padding: 30px 15px;
+    }
+    
+    .links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .top-left p,
+    .top-right p,
+    .bottom-center p {
+        font-size: 0.85em;
+        line-height: 1.3;
     }
 
-    .menuContent
-    {
+    .ourochoopp .carousel-item img {
+        max-width: 85%;
+    }
+    
+    .video-container h3 {
+        font-size: 1.4em;
+    }
+    
+    .video-container p {
+        font-size: 0.95em;
+        max-width: 95%;
+    }
+
+    .click-to-play {
         display: block;
+        margin: 10px auto 5px;
+        font-size: 0.85em;
+        padding: 4px 8px;
     }
-    .menuContent > li
-    {
-        padding: 1.08%;
-        display: inline;
-        margin: 1%;
-    }
+}
 
-    .menuContent > li:hover
-    {
-        font-size: 1.17em;
-        transition-duration: .6s;
-    }
+/* Estilos para o conteúdo dos detalhes */
+.details-content {
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
 
-    #logo{
-        left: 0%;
-    }
+/* Estilos para o container do cartão digital */
+.cartao-digital-container {
+    margin: 30px auto;
+    text-align: center;
+}
 
+.btn {
+    background-color: var(--laranja);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
 
-/*__________________________________________________________________________________sobre*/
-
-    /*_______________________________________________________________________________cards*/
-    #proserv, #serv
-    {
-        display: block;
-        max-width: 693px;
-        margin: 0% auto;
-    }
-
-    .cardDuro
-    {
-        display: inline-block;
-        vertical-align: top;
-        height: 433px;
-        width: 270px;
-        margin: 1% auto;
-    }
-
-    .cardExpand-body
-{
-    padding: 3%;
-    background-color: #ffffff;
-    display: none;
+.btn:before {
+    content: '';
     position: absolute;
-    width: 27%;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
 }
 
-    /*_______________________________________________________________________________rodape*/
-    .links
-    {
-        display: block;
-        width: 540px;
-        margin: 0% auto;
-    }
-
-    .links a img:hover
-    {
-        width: 96px;
-    }
-
-    .links a img
-    {
-        margin: 1.8% 7.2%;
-        border-radius: 50%;
-        width: 90px;
-    }
-
+.btn:hover:before {
+    left: 100%;
 }
 
-
-@media (min-width: 999px)
-{
-    header
-    {
-        height: 100%;
-        background-size: 21%;
-        background-repeat: no-repeat;
-        background-position: center;
-
-    }
-
-    .mrkt-inicial{
-        top:-24%;
-    }
-
-    section
-    {
-        max-width: 96%;
-        margin: auto;
-    }
-
-    footer{
-        margin-top: 12%;
-    }
-/*___________________________________________________________________________________menu*/
-.menu
-{
-    width: 300px;
-    padding: 1.5% 0%;
-    position:absolute;
-    left: 69%;
-    top: 0%;
+.btn a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    z-index: 2;
 }
 
-.menu >span
-{
-    display: none;
+.btn:hover {
+    background-color: var(--verdeEscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-.menuContent
-{
-    display: inline;
-}
-.menuContent > li
-{
-    padding: 1.08%;
-    display: inline;
-    margin: 1%;
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.menuContent > li:hover
-{
-    font-size: 1.17em;
-    transition-duration: .6s;
+.hailton {
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Prata', serif;
+    font-size: 0.75em;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin-top: 0;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    border-top: 1px solid var(--roxo);
 }
 
-
-/*__________________________________________________________________________________sobre*/
-
-
-
-    /*_______________________________________________________________________________cards*/
-    #proserv, #serv
-    {
-        display: block;
-        max-width: 1008px;
-        margin: 0% 9%;
-    }
-
-    .cardExpand-body
-    {
-        padding: 3%;
-        background-color: #ffffff;
-        display: none;
-        position: absolute;
-        right: 6%;
-        width: 21%;
-    }
-
-    .cardDuro
-    {
-        vertical-align: top;
-        height: 405px;
-        width: 360px;
-        margin: 1% 1%;
-    }
-
-    /*_______________________________________________________________________________rodape*/
-    .links
-    {
-        display: inline-block;
-        width: 540px;
-        margin: 0 21%;
-    }
-
-    .links a img
-    {
-        margin: 1.8% 7.2%;
-        border-radius: 50%;
-        width: 90px;
-    }
-
-
+.hailton:hover {
+    opacity: 0.9;
 }
+
+.hailton a {
+    color: var(--roxo);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hailton a:hover {
+    color: var(--laranja);
+}
+
+/* Estilos para o vídeo com carregamento preguiçoso */
+.click-to-play {
+    display: inline-block;
+    background-color: var(--roxo);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 0.9em;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+}
+
+.lazy-video {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.lazy-video:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Fix para o carrossel e responsividade geral */
